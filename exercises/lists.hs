@@ -6,7 +6,15 @@ myLast [x] = x
 myLast (x:xs) = myLast xs
 
 -- 2. Find the last but one element of a list.
+
 myLastButOne :: [a] -> a
 myLastButOne [] = error "empty list"
 myLastButOne [x, y] = x
 myLastButOne (x:xs) = myLastButOne xs
+
+-- 3. Find the K'th element of a list.
+
+findK :: Int -> [a] -> a
+findK _ [] = error "empty list"
+findK 1 (x:_) = x
+findK k (x:xs) = findK (k-1) xs
