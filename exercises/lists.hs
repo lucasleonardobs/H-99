@@ -24,3 +24,9 @@ findK k (x:xs) = findK (k-1) xs
 lenght :: [a] -> Int
 lenght [] = 0
 lenght (x:xs) = 1 + lenght xs
+
+-- 5.  Reverse a list.
+
+rvrs :: [a] -> [a]
+rvrs [] = []
+rvrs (x:xs) = rvrs xs ++ [x]
