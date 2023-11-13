@@ -10,7 +10,7 @@
 - [X] 4. Find the number of elements of a list.
 - [X] 5. Reverse a list.
 - [X] 6. Find out whether a list is a palindrome.
-- [ ] 7. Flatten a nested list structure.
+- [X] 7. Flatten a nested list structure.
 - [ ] 8. Eliminate consecutive duplicates of list elements.
 - [ ] 9. Pack consecutive duplicates of list elements into sublists.
 - [ ] 10. Run-length encoding of a list.

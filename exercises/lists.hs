@@ -40,3 +40,8 @@ palindrome a
     | head a == myLast a = palindrome (tail (init a))
     | otherwise = False
 
+-- 7. Flatten a nested list structure.
+
+flattenNestedList :: [[a]] -> [a]
+flattenNestedList [] = []
+flattenNestedList (x:xs) = x ++ flattenNestedList xs
