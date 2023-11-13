@@ -35,7 +35,7 @@ rvrs (x:xs) = rvrs xs ++ [x]
 -- 6. Find out whether a list is a palindrome.
 
 palindrome :: String -> Bool
-palindrome a 
+palindrome a
     | lenght a < 2 = True
     | head a == myLast a = palindrome (tail (init a))
     | otherwise = False
@@ -45,3 +45,12 @@ palindrome a
 flattenNestedList :: [[a]] -> [a]
 flattenNestedList [] = []
 flattenNestedList (x:xs) = x ++ flattenNestedList xs
+
+-- 8. Eliminate consecutive duplicates of list elements.
+
+dedup :: Eq a => [a] -> [a]
+dedup [] = []
+dedup [x] = [x]
+dedup (x:xs)
+    | x == head xs = dedup xs 
+    | otherwise = x : dedup xs
