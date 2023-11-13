@@ -1,3 +1,4 @@
+import Data.Data (dataTypeConstrs)
 -- 1. Find the last element of a list.
 
 myLast :: [a] -> a
@@ -30,3 +31,12 @@ lenght (x:xs) = 1 + lenght xs
 rvrs :: [a] -> [a]
 rvrs [] = []
 rvrs (x:xs) = rvrs xs ++ [x]
+
+-- 6. Find out whether a list is a palindrome.
+
+palindrome :: String -> Bool
+palindrome a 
+    | lenght a < 2 = True
+    | head a == myLast a = palindrome (tail (init a))
+    | otherwise = False
+
